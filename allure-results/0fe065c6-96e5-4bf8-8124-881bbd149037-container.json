@@ -1,0 +1,1 @@
+{"uuid":"0fe065c6-96e5-4bf8-8124-881bbd149037","name":"Trmis_automation","children":["b24db909-44da-4167-b807-10499498c1a3"],"befores":[{"name":"LoginWithValidCred","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1705317388280,"stop":1705317396480}],"afters":[],"start":1705317388278,"stop":1705317396581}

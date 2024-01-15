@@ -1,0 +1,7 @@
+<suite thread-count="1" verbose="1" name="TrMIs Automation">
+    <test name="TrMIS portal login test">
+        <classes>
+            <class name="test_runner.Login_test_runner"/>
+        </classes>
+    </test>
+</suite>
