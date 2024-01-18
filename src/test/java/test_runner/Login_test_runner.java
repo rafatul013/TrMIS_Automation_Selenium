@@ -15,7 +15,7 @@ public class Login_test_runner extends Setup {
         Driver.navigate().refresh();
     }
 
-    @Test(priority = 2,description = "User doLogin with invalid credential")
+    @Test(priority = 2,description = "User doLogin with invalid Credential")
     public void LoginWithInvalidCred() throws InterruptedException {
         LoginPage loginPage=new LoginPage(Driver);
         String message_actual = loginPage.doLoginWithInvalidCred();
