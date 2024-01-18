@@ -22,6 +22,7 @@ public class Setup {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--no-sandbox");
             options.addArguments("--disable-dev-shm-usage");
+            options.setHeadless(false);
 
             WebDriverManager.chromedriver().setup();
             Driver = new ChromeDriver(options);

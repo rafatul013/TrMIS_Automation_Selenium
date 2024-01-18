@@ -3,6 +3,7 @@ package test_runner;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.Dashboard;
@@ -12,13 +13,10 @@ import pages.TrainingPage;
 import setup.Setup;
 
 public class Dashboard_Test_Runner extends Setup {
-    LoginPage loginPage;
-    Dashboard dashboard;
-    Logout logout;
-    TrainingPage trainingPage;
 
-   // @Test(priority = 1,description = "User doLogin with Valid credential")
-    @BeforeTest
+//    @Test(priority = 1,description = "User doLogin with Valid credential")
+//   @BeforeTest
+    @BeforeSuite
     public  void LoginWithValidCred() throws InterruptedException {
         LoginPage loginPage=new LoginPage(Driver);
         loginPage.loginValid();
@@ -29,6 +27,7 @@ public class Dashboard_Test_Runner extends Setup {
         String msg_actual=Driver.findElements(By.className("t-text-base")).get(0).getText();
         String msg_expected="Participants Enrolled";
         Assert.assertTrue(msg_actual.contains(msg_expected));
+        Driver.navigate().refresh();
     }
     @Test(priority = 3,description = "User Can Select Year")
     public void ChoseYear() throws InterruptedException {
