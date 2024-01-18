@@ -19,7 +19,7 @@ public class Login_test_runner extends Setup {
     public void LoginWithInvalidCred() throws InterruptedException {
         LoginPage loginPage=new LoginPage(Driver);
         String message_actual = loginPage.doLoginWithInvalidCred();
-        String message_expected="Invalid Username Or Password";
+        String message_expected="Invalid 67t7t7hjrname Or Password";
         Assert.assertTrue(message_actual.contains(message_expected));
        // Thread.sleep(3000);
  }
